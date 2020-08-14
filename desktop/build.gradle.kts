@@ -1,8 +1,11 @@
+import org.jetbrains.dokka.gradle.DokkaTask
+import org.jetbrains.dokka.Platform
+
 plugins {
-  java
-  kotlin("jvm") version "1.3.10"
+  kotlin("jvm")
+  id("org.jetbrains.dokka")
 }
 
 dependencies {
-  apiElements(project(":common"))
+  api(project(":common"))
 }

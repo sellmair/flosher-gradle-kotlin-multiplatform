@@ -1,6 +1,12 @@
-apply(plugin = "kotlin-platform-js")
-
+plugins {
+  kotlin("js")
+  id("org.jetbrains.dokka")
+}
 dependencies {
-  add("expectedBy", project(":common"))
-  add("implementation", kotlin("stdlib-js"))
+  api(project(":common"))
+}
+kotlin {
+  js {
+    browser()
+  }
 }
