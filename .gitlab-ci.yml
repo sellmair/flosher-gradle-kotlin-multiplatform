@@ -1,0 +1,9 @@
+image: openjdk:8-jdk-alpine
+
+dokka:
+  stage: build
+  script:
+    - ./gradlew :desktop:dokkaHtml
+  artifacts:
+    paths:
+      - desktop/build/

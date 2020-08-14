@@ -1,9 +1,11 @@
-import org.jetbrains.dokka.gradle.DokkaTask
-import org.jetbrains.dokka.Platform
-
 plugins {
   kotlin("jvm")
   id("org.jetbrains.dokka")
+}
+
+repositories {
+  mavenLocal()
+  jcenter()
 }
 
 dependencies {

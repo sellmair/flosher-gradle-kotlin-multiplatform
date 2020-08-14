@@ -7,6 +7,11 @@ plugins {
   id("org.jetbrains.dokka")
 }
 
+repositories {
+  mavenLocal()
+  jcenter()
+}
+
 kotlin {
 
   jvm()
@@ -33,5 +38,8 @@ tasks.withType(DokkaTask::class) {
   dokkaSourceSets {
     val jsMain by registering
     val jvmMain by registering
+    configureEach {
+      includes.plus("packages.md")
+    }
   }
 }

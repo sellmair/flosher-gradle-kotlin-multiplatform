@@ -1,5 +1,6 @@
 pluginManagement {
   repositories {
+    mavenLocal()
     gradlePluginPortal()
     jcenter()
   }
@@ -9,7 +10,7 @@ pluginManagement {
         useVersion("1.4.0")
       }
       if (requested.id.id == "org.jetbrains.dokka") {
-        useVersion("1.4.0-rc")
+        useVersion("1.4.0-rc-SNAPSHOT")
       }
     }
   }
