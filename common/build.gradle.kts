@@ -1,6 +1,4 @@
 import org.jetbrains.dokka.gradle.DokkaTask
-import org.jetbrains.dokka.Platform
-import java.net.URL
 
 plugins {
   kotlin("multiplatform")
@@ -35,8 +33,6 @@ kotlin {
 
 tasks.withType(DokkaTask::class) {
   dokkaSourceSets {
-    val jsMain by registering
-    val jvmMain by registering
     configureEach {
       includes.plus("packages.md")
     }
